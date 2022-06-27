@@ -28,7 +28,7 @@ public class Test {
 //		});
 		
 		Collections.sort(empList,(e1,e2)->e1.getName().compareTo(e2.getName()));// using lambda expression,best approach
-		
+		Comparator.comparing(Employee::getEmail);
 		System.out.println("--------------------------------------------");
 		System.out.println("List of employee after sorting..");
 		empList.forEach(System.out::println);
