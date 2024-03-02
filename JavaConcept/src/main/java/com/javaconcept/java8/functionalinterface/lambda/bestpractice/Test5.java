@@ -18,7 +18,7 @@ public class Test5 {
 		System.out.println(apply);
 		
 		System.out.println("----------------------------");
-		//Function<String, String> function1 =s->s.toUpperCase();
+		Function<String, String> function12 =s->s.toUpperCase();
 		Function<String, String> function1 =String::toUpperCase;
 		
 		String result = function1.apply("Sean");

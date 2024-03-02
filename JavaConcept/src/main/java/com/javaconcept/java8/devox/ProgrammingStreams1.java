@@ -4,6 +4,7 @@ import static java.util.stream.Collectors.toList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 /*
  * 
@@ -31,7 +32,7 @@ public class ProgrammingStreams1 {
 				names.add(person.getName().toUpperCase());
 			}
 		}
-
+		 Predicate<Integer> isEven = (n) -> n % 2 == 0; 
 		System.out.println(names);
 
 		// The above mixes what with how - sequential, one element at a time. Details
@@ -41,8 +42,12 @@ public class ProgrammingStreams1 {
 
 		// Let's use Streams instead
 
-		System.out.println(people.stream().filter(person -> person.getGender() == Gender.FEMALE)
-				.filter(person -> person.getAge() > 18).map(person -> person.getName().toUpperCase())
+		System.out.println(
+				people
+				.stream()
+				.filter(person -> person.getGender() == Gender.FEMALE)
+				.filter(person -> person.getAge() > 18)
+				.map(person -> person.getName().toUpperCase())
 				.collect(toList()));
 
 		// better way
@@ -52,6 +57,8 @@ public class ProgrammingStreams1 {
 				.map(Person::getName)
 				.map(String::toUpperCase)
 				.collect(toList()));
+		
+		System.out.println("-----------------------");
 
 		// we said what, not how, may be sequential, lazy, parallel, etc.
 		// functional and declarative in nature - no explicit mutation and higher level
@@ -68,7 +75,8 @@ public class ProgrammingStreams1 {
 	          .forEach(System.out::println);
 
 		// print all males, but with name in uppercase
-		people.stream().filter(person -> person.getGender() == Gender.MALE)
+		people.stream()
+		        .filter(person -> person.getGender() == Gender.MALE)
 				.map(person -> new Person(person.getName().toUpperCase(), person.getGender(), person.getAge()))
 				.forEach(System.out::println);
 

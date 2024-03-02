@@ -23,6 +23,7 @@ public class FunctionalProgramming2 {
 
 		numbers.forEach(new Consumer<Integer>() {
 			public void accept(Integer e) {
+				e=e+5;
 			  System.out.println(e);
 			}
 		});

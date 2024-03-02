@@ -6,10 +6,11 @@ public class StandardFunctionalInterfaceTest {
 
 	public static void main(String[] args) {
 		
-//		Foo foo =s->s+" from Lambda";
-//		UseFoo useFoo = new UseFoo();
-//		String result = useFoo.add("John", foo);
-//
+		Foo foo =s->s+" from Lambda";
+		UseFoo useFooo = new UseFoo();
+		String resultt = useFooo.addd("John", foo);
+		System.out.println(resultt);
+
 		
 		Function<String, String> function=s->s+ " from Lambda";
 		UseFoo useFoo = new UseFoo();

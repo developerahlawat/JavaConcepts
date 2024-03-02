@@ -26,15 +26,20 @@ public class ProgrammingStreams4 {
 	          .filter(person -> person.getAge() > 17)
 	          .map(Person::getName)
 	          .map(String::toUpperCase)
-				.forEach(names::add); // DON'T DO THIS,names is not getting to be used.
+			  .forEach(names::add); // DON'T DO THIS,names is not getting to be used.
 	  
 	   //causes side-effect, interfering, mutating, ugly, smelly, dangerous, can't make this concurrent.
 	          
 	   System.out.println(names);
 
 		// list of all adult names in uppercase
-		List<String> namess = people.stream().filter(person -> person.getAge() > 17).map(Person::getName)
-				.map(String::toUpperCase).collect(() -> new ArrayList<String>(), (list, name) -> list.add(name),
+		List<String> namess = people
+				.stream()
+				.filter(person -> person.getAge() > 17)
+				.map(Person::getName)
+				.map(String::toUpperCase)
+				.collect(() -> new ArrayList<String>(), 
+						(list, name) -> list.add(name),
 						(list1, list2) -> list1.addAll(list2));
 
 		System.out.println(namess);

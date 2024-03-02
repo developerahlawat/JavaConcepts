@@ -15,7 +15,13 @@ public class ProgrammingStreams2 {
 
 		// total age of everyone
 		int total = people.stream().map(Person::getAge).reduce(0, (accumuated, age) -> accumuated + age);
-
+		int t = people.stream().map(p->p.getAge()).reduce(0, (a,b)-> a+b);
+		
+		int tt = people.stream().reduce(0, (a,b)-> a+b.getAge(),Integer::sum);
+		int ttt = people.stream().reduce(0, (a,b)-> a-b.getAge(),Integer::min);
+		// since we are passing user in b reduce is not able to identify 
+		System.out.println(t);
+		System.out.println(tt);
 		System.out.println(total);
 
 		// or //better approach
@@ -23,6 +29,7 @@ public class ProgrammingStreams2 {
 
 		// or
 		System.out.println(people.stream().mapToInt(Person::getAge).sum());
+		
 		
 	}
 }

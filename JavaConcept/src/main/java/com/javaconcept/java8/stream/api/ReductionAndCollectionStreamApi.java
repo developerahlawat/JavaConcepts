@@ -78,6 +78,8 @@ public class ReductionAndCollectionStreamApi {
   
         // Displaying the product
         System.out.println("The product is : " + product);
+        
+
     }
 		
 	}

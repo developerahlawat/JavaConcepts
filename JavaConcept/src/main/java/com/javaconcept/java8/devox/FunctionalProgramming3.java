@@ -5,7 +5,7 @@ import java.util.List;
 public class FunctionalProgramming3 {
 	public static void main(String[] args) {
 		List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
-		// find total of double of even umbers
+		// find total of double of even numbers
 
 		int result = 0;
 		for (int e : numbers) {

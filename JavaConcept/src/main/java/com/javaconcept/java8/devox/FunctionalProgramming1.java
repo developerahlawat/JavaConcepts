@@ -13,7 +13,7 @@ public class FunctionalProgramming1 {
 	public static void main(String[] args) {
 
 		Thread th = new Thread();
-
+	    
 		
 		//using Ananomous function
 		Thread thh = new Thread(new Runnable() {

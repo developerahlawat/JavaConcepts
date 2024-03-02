@@ -13,11 +13,11 @@ public class StreamFilterApi {
     public static void main(String[] args) {  
         List<Products> productsList = new ArrayList<Products>();  
         //Adding Products  
-        productsList.add(new Products(1,"HP Laptop",25000f));  
-        productsList.add(new Products(2,"Dell Laptop",30000f));  
-        productsList.add(new Products(3,"Lenevo Laptop",28000f));  
-        productsList.add(new Products(4,"Sony Laptop",28000f));  
-        productsList.add(new Products(5,"Apple Laptop",90000f));  
+        productsList.add(new Products(1,"HP Laptop",25000));  
+        productsList.add(new Products(2,"Dell Laptop",30000));  
+        productsList.add(new Products(3,"Lenevo Laptop",28000));  
+        productsList.add(new Products(4,"Sony Laptop",28000));  
+        productsList.add(new Products(5,"Apple Laptop",90000));  
        
         
 //        List<Float> productPriceList = new ArrayList<Float>();  
@@ -32,7 +32,7 @@ public class StreamFilterApi {
         
         
 		
-		  List<Float> productPriceList =productsList.stream()
+		  List<Integer> productPriceList =productsList.stream()
 				                           .filter(p ->p.price < 30000)// filtering data // filtering data using stream //
 		                                  .map(p->p.price) // fetching price // 
 		                                  .collect(Collectors.toList()); // collecting as list // 
@@ -60,9 +60,9 @@ public class StreamFilterApi {
            System.out.println("----------------------------------");
            // by using reduce() Method in Collection to summ data
        
-           Float totalPrice = productsList.stream()  
+           Integer totalPrice = productsList.stream()  
                .map(product->product.price)  
-               .reduce(0.0f,(sum, price)->sum+price);   // accumulating price  
+               .reduce(0,(sum, price)->sum+price);   // accumulating price  
            System.out.println(totalPrice);  
   
    
@@ -71,7 +71,7 @@ public class StreamFilterApi {
        // More precise code   
         float totalPrice2 = productsList.stream()  
                .map(product->product.price)  
-               .reduce(0.0f,Float::sum);   // accumulating price, by referring method of Float class  
+               .reduce(0,Integer::sum);   // accumulating price, by referring method of Float class  
         System.out.println(totalPrice2);  
         
    
@@ -113,7 +113,7 @@ public class StreamFilterApi {
         //Convert List into Set
         
         // Converting product List into Set  
-        Set<Float> productPriceList5 = productsList.stream()  
+        Set<Integer> productPriceList5 = productsList.stream()  
             .filter(product->product.price < 30000)   // filter product on the base of price  
             .map(product->product.price)  
             .collect(Collectors.toSet());   // collect it as Set(remove duplicate elements)  
@@ -133,7 +133,7 @@ public class StreamFilterApi {
         System.out.println("----------------------------------"); 
         
        // Method Reference in stream
-        List<Float> productPriceList6 =   
+        List<Integer> productPriceList6 =   
                 productsList.stream()  
                             .filter(p -> p.price > 30000) // filtering data  
                             .map(Products::getPrice)         // fetching price by referring getPrice method  
