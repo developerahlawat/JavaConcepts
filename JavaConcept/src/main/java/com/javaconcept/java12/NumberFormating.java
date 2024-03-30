@@ -8,25 +8,25 @@ public class NumberFormating {
 
 	public static void main(String[] args) throws ParseException {
 		/*
-		 * // Create new CompactNumberFormat instance NumberFormat fmt =
-		 * NumberFormat.getCompactNumberInstance(new Locale("hi", "IN"),
-		 * NumberFormat.Style.SHORT);
-		 * 
-		 * NumberFormat fmt = NumberFormat.getCompactNumberInstance(Locale.US,
-		 * NumberFormat.Style.LONG);
-		 * 
-		 * //Custom CompactNumberFormat instance final String[] compactPatterns = { "",
-		 * "", "", "0k", "00k", "000k", "0m", "00m", "000m", "0b", "00b", "000b", "0t",
-		 * "00t", "000t" };
-		 * 
-		 * final DecimalFormat decimalFormat = (DecimalFormat)
-		 * NumberFormat.getNumberInstance(Locale.GERMANY);
-		 * 
-		 * final CompactNumberFormat customCompactNumberFormat = new
-		 * CompactNumberFormat(decimalFormat.toPattern(),
-		 * decimalFormat.getDecimalFormatSymbols(), compactPatterns);
-		 */
+		  Create new CompactNumberFormat instance NumberFormat fmt =
+		  NumberFormat.getCompactNumberInstance(new Locale("hi", "IN"),
+		  NumberFormat.Style.SHORT);
+		  
+		  NumberFormat fmt = NumberFormat.getCompactNumberInstance(Locale.US,
+		  NumberFormat.Style.LONG);
+		  
+		 Custom CompactNumberFormat instance final String[] compactPatterns = { "",
+		  "", "", "0k", "00k", "000k", "0m", "00m", "000m", "0b", "00b", "000b", "0t",
+		  "00t", "000t" };
+		  
+		  final DecimalFormat decimalFormat = (DecimalFormat)
+		  NumberFormat.getNumberInstance(Locale.GERMANY);
+		  
+		 final CompactNumberFormat customCompactNumberFormat = new
+		 CompactNumberFormat(decimalFormat.toPattern(),
+		 decimalFormat.getDecimalFormatSymbols(), compactPatterns);
 		
+	*/	
 		
 		 NumberFormat fmt = NumberFormat
 	                .getCompactNumberInstance(Locale.US, NumberFormat.Style.LONG);

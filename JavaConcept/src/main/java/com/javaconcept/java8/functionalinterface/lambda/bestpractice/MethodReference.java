@@ -1,15 +1,15 @@
-package com.javaconcept.java8.methodreference.staticmethod;
+package com.javaconcept.java8.functionalinterface.lambda.bestpractice;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ClientTest {
+public class MethodReference {
 
 	public static void main(String[] args) {
 
 		ExecutorService executorService = Executors.newSingleThreadExecutor();
 		
-		Runnable command = ClientTest::myRun;//class then its static method name using method refernce
+		Runnable command = MethodReference::myRun;//class then its static method name using method refernce
 		executorService.execute(command);
 	}
 

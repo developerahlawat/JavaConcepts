@@ -3,7 +3,7 @@ package com.javaconcept.java12;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringApiEnhancement {
+public class NewStringMethods {
 	public static void main(String[] args) {
 	String result = "foo\nbar\nbar2".indent(4);
 
@@ -19,5 +19,7 @@ public class StringApiEnhancement {
 	 for( String name:names) { 
 		 String transformedName = name.transform(String::strip);
 	 	 transformedNames.add(transformedName); }
+	 
+	 transformedNames.forEach(System.out::println);
 }
 }

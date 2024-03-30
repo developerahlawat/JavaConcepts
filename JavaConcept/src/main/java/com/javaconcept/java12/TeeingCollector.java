@@ -11,14 +11,18 @@ public class TeeingCollector {
 
 	public static void main(String[] args) {
 		
-		double mean = Stream.of(1, 2, 3, 4, 5)
+		var mean = Stream.of(1, 2, 3, 4, 5)
                 .collect(Collectors.teeing(
-                        summingDouble(i -> i),
-                        counting(),
-                        (sum, n) -> sum / n));
+                		// first collector
+                         Collectors.counting(),
+                        // second collector
+                         Collectors.summingInt(n->Integer.valueOf(n.toString())),
+                       // merger: (count, sum) -> new Result(count, sum);
+                         Result::new));
 
         System.out.println(mean);
-		
+        System.out.println("-----------------------");
+        
 		 List<Employee> employeeList = Arrays.asList(
                  new Employee(1, "A", 100),
                  new Employee(2, "B", 200),
