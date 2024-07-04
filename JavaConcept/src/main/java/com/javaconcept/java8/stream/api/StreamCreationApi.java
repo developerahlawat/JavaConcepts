@@ -15,6 +15,8 @@ public class StreamCreationApi {
 		String arr[]= new String[]{"AA","BB","CC"};
 		Stream<String> stream = Arrays.stream(arr);
 		stream.forEach(System.out::println);
+		Stream<Integer> streamm = Stream.iterate(1, i->i+1);
+		stream.limit(5).filter(i-> i%2==0).forEach(System.out::println);
 		
 		System.out.println("----------------------");
 		Stream<String> of = Stream.of("A","B","C","D");		

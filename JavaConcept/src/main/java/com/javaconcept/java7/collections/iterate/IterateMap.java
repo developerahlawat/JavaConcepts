@@ -5,7 +5,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.javaconcept.java7.comparatorusinglambda.Employee;
+import com.javaconcept.java7.comparator.Employee;
+
+
 
 public class IterateMap {
 

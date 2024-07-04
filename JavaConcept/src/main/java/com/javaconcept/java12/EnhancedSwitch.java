@@ -3,8 +3,7 @@ package com.javaconcept.java12;
 public class EnhancedSwitch {
 	
 
-	  public static void main(String[] args)
-    {
+	  public static void main(String[] args) {
         System.out.println("New Switch Expression result:");
         executeOldSwitchExpression("M");
         executeNewSwitchExpression("M");
@@ -49,3 +48,5 @@ public class EnhancedSwitch {
       
 	}
 }
+
+

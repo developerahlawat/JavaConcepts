@@ -30,6 +30,7 @@ public class MultithreadingDemoUsingThread extends Thread {
 				MultithreadingDemoUsingThread object
 					= new MultithreadingDemoUsingThread();
 				object.start();
+				//object.run();
 			}
 		}
 	}

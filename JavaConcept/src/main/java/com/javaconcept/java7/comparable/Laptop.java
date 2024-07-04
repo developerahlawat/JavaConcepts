@@ -39,10 +39,7 @@ public class Laptop implements Comparable<Laptop> {
 
 	@Override
 	public int compareTo(Laptop o) {
-		if(this.getRam()> o.getRam())
-			return 1;
-		else
-			 return -1;
+		return this.getRam()- o.getRam();
 	}
 
 	@Override

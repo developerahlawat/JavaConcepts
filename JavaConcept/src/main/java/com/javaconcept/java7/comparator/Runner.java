@@ -16,10 +16,7 @@ public class Runner {
 		
 		Comparator<Laptop> com=new Comparator<Laptop>() {
 		   public int compare(Laptop lap1,Laptop lap2) {
-			   if(lap1.getPrice()>lap2.getPrice())
-				   return 1;
-			   else
-				   return -1;
+			   return lap1.getPrice()-lap2.getPrice();				  
 		   }	
 		};	
 		

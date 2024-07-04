@@ -1,6 +1,8 @@
-package com.javaconcept.java7.comparatorusinglambda;
+package com.javaconcept.java7.comparator;
 
 import java.util.Comparator;
+
+
 
 public class EmployeeNameSorter implements Comparator<Employee> {
 
