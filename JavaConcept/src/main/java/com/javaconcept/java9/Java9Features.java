@@ -1,9 +1,6 @@
-package com.javacpnecpt.java9;
+package com.javaconcept.java9;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Java9Features {
 	public static void main(String[] args) {
